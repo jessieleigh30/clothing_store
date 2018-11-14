@@ -1,0 +1,12 @@
+<%= link_to 'Create Item', new_department_item_path(@department) %>
+<% @items.each do |items| %>
+  <h2><%= items.name %></h2>
+  <%= link_to 'Show Item',new_department_item_path(@department) %>
+  <%= link_to 'Edit Item', edit_department_item_path(@department, @item) %>
+  <% end %>
+
+
+
+
+  
+ 

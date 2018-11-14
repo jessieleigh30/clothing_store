@@ -4,6 +4,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :description
       t.float :price
+      t.belongs_to :department, foreign_key: true
 
       t.timestamps
     end
