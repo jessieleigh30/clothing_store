@@ -14,7 +14,7 @@ class DepartmentsController < ApplicationController
   def create
     @department = Department.new(department_params)
     if @department.save
-      redirect_to subs_path
+      redirect_to departments_path
     else
       render :new
     end
@@ -24,5 +24,10 @@ class DepartmentsController < ApplicationController
   @department = Department.find(params[:id])
   end
 
+  private
+
+  def department_params
+    params.require(:department).permit(:name)
+  end
   
 end
